@@ -17,9 +17,16 @@
 // greet("Neda");
 
 let areaCalc=function (radius){
+    let radiusP= document.querySelector("#radius");
+    // console.log(radiusP);
+    radiusP.textContent=radius;
     return Math.PI*radius*radius;
 }
 
 let r= prompt("Enter the radius");
-let area = areaCalc(r);
-alert(`The area is ${Math.trunc(area*100)/100}`);
+
+let area = Math.trunc(areaCalc(r)*100)/100;
+alert(`The area is ${area}`);
+let resultP= document.querySelector("#result");
+// console.log(resultP);
+resultP.textContent= area;
