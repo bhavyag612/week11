@@ -16,17 +16,29 @@
 // greet("Neda","night","morning");
 // greet("Neda");
 
-let areaCalc=function (radius){
-    let radiusP= document.querySelector("#radius");
-    // console.log(radiusP);
-    radiusP.textContent=radius;
-    return Math.PI*radius*radius;
+// let areaCalc=function (radius){
+//     let radiusP= document.querySelector("#radius");
+//     // console.log(radiusP);
+//     radiusP.textContent=radius;
+//     return Math.PI*radius*radius;
+// }
+
+// let r= prompt("Enter the radius");
+
+// let area = Math.trunc(areaCalc(r)*100)/100;
+// alert(`The area is ${area}`);
+// let resultP= document.querySelector("#result");
+// // console.log(resultP);
+// resultP.textContent= area;
+const unorderedList= document.querySelector(".shopping");
+function populateList(list)
+{
+    list.forEach(a => {
+        let newItem=document.createElement("li");
+        unorderedList.appendChild(newItem);
+        newItem= newItem.textContent=a;
+    });
 }
 
-let r= prompt("Enter the radius");
-
-let area = Math.trunc(areaCalc(r)*100)/100;
-alert(`The area is ${area}`);
-let resultP= document.querySelector("#result");
-// console.log(resultP);
-resultP.textContent= area;
+const shoppingList=["cheese","bread","green pepper"];
+populateList(shoppingList);
