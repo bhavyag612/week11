@@ -31,6 +31,7 @@
 // // console.log(resultP);
 // resultP.textContent= area;
 const unorderedList= document.querySelector(".shopping");
+console.log(unorderedList);
 function populateList(list)
 {
     list.forEach(a => {
@@ -42,3 +43,12 @@ function populateList(list)
 
 const shoppingList=["cheese","bread","green pepper"];
 populateList(shoppingList);
+
+function changeListStyle()
+{
+    unorderedList.classList.replace("circleList","squareList");
+    console.log(unorderedList);
+}
+
+changeListStyle();
+
